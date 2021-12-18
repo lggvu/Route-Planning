@@ -1,0 +1,31 @@
+distance, toll <- loaded from the dataset route-info.csv 
+fly_cost <- loaded from the dataset air-info.csv 
+
+
+
+function UNIFORM-COST-SEARCH(start(node), goal(node)) returns a solution, or failure
+	start(node) <- a node with start(node).name = name, start(node).parent = None, path_cost = 0
+	frontier <- a priority queue ordered by path_cost, with Node as the only element
+	visited <- an empty set
+	fly_cost = fly_cost[start][goal]
+
+	while loop do
+		if EMPTY?(frontier) then return failure
+		node <- POP(frontier)  // chooses the lowest-cost node in frontier
+		if node is goal then 
+			if path_cost >= fly_cost then 
+				return fly_cost
+			else return SOLUTION(node)
+		add node to visited
+	for each child in successor(node) do 
+		distance = distance[node][child]
+		//fly_cost = fly_cost[node][child]
+		path_cost = path_cost(node) + distance + toll[node][child], fly_cost[node][child]
+		if child is not in visited or child is not in frontier then
+				frontier <- INSERT(child, frontier)
+		else if child is in frontier with higher path_cost then  
+			replace that frontier node with child  
+
+
+
+
