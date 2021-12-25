@@ -3,7 +3,8 @@ Some datasets for the project (all included in the **dat** folder)
 - `air-info`: Flight distance between two cities (if there exists a flight route).
 - `heuristics`: The distance as crow flies between two arbitrary cities (31x31 matrix)
 - `city-label`: The label for each city in the 32 given cities.
-Explain data processing
+
+-Explain data processing
 1. Use Pandas to read the 'route-info.csv' and 'air-info.csv' file
 2. Convert their data frame into numpy array( data and data1)
 3. Create a column present the total cost between cities( sum of path cost and toll station) ( fee ) 
