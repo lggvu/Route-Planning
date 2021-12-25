@@ -19,7 +19,6 @@ function UNIFORM-COST-SEARCH(start(node), goal(node)) returns a solution, or fai
 		add node to visited
 	for each child in successor(node) do 
 		distance = distance[node][child]
-		//fly_cost = fly_cost[node][child]
 		path_cost = path_cost(node) + distance + toll[node][child], fly_cost[node][child]
 		if child is not in visited or child is not in frontier then
 				frontier <- INSERT(child, frontier)
