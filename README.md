@@ -1,3 +1,4 @@
+# Route Planning - Intro to AI Project
 Some datasets for the project (all included in the **data** folder)
 - `route-info`: Distance between ADJACENT cities, the final column is the toll cost to travel between two adjacent cities.
 - `air-info`: Flight distance between two cities (if there exists a flight route).
